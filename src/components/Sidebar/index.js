@@ -1,13 +1,10 @@
 import './index.scss'
 import { useState } from 'react'
-import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
+import LogoS from '../../assets/images/logo-I.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
   faGithub,
-  faYoutube,
-  faSkype,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
@@ -29,7 +26,6 @@ const Sidebar = () => {
         to="/"
         onClick={() => setShowNav(false)}>
         <img src={LogoS} alt="Logo" />
-        <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink 
@@ -72,7 +68,7 @@ const Sidebar = () => {
       <ul>
         <li>
           <a
-            href="https://www.linkedin.com/in/slobodan-gaji%C4%87-006bb8b8/"
+            href="https://www.linkedin.com/in/j-isaacadams/"
             target="_blank"
             rel="noreferrer"
           >
@@ -85,34 +81,12 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://github.com/bobangajicsm"
+            href="https://github.com/j-isaac-adams"
             target="_blank"
             rel="noreferrer"
           >
             <FontAwesomeIcon
               icon={faGithub}
-              color="#4d4d4e"
-              className="anchor-icon"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <FontAwesomeIcon
-              icon={faYoutube}
-              color="#4d4d4e"
-              className="anchor-icon"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
-            <FontAwesomeIcon
-              icon={faSkype}
               color="#4d4d4e"
               className="anchor-icon"
             />

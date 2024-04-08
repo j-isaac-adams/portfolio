@@ -1,4 +1,4 @@
-import { signInWithGoogle } from '../../firebase';
+/* import { signInWithGoogle } from '../../firebase';
 
 const Login = () => {
     return (
@@ -10,4 +10,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Login; */

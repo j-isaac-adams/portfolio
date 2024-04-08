@@ -19,8 +19,10 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
+    emailjs.init("3lKVLKfI_7EMKu1x-");
+
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm('service_eddn63z','template_k0c955j',form.current)
       .then(
         () => {
           alert('Message successfully sent!')
@@ -39,14 +41,13 @@ const Contact = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
+              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'M', 'e']}
               idx={15}
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
-            or large projects. However, if you have any other requests or
-            questions, don't hesitate to contact me using below form either.
+            I am interested in freelance opportunities, part-time job opportunites, and internships, please reach out if
+            you feel I would be a good fit for your project/team or if you have any questions.
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
@@ -85,25 +86,25 @@ const Contact = () => {
           </div>
         </div>
         <div className="info-map">
-          Slobodan Gajić,
+          Isaac Adams
           <br />
-          Serbia,
+          Raleigh / Charlotte, NC
           <br />
-          Branka RadiČevića 19, 22000 <br />
-          Sremska Mitrovica <br />
+          United States
+           <br />
           <br />
-          <span>freelancerslobodan@gmail.com</span>
+          <span>j.isaac.adams@icloud.com</span>
         </div>
         <div className="map-wrap">
-          <MapContainer center={[44.96366, 19.61045]} zoom={13}>
+          <MapContainer center={[35.783835, -78.670851]} zoom={15}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[44.96366, 19.61045]}>
-              <Popup>Sloba lives here, come over for a cup of coffee :)</Popup>
+            <Marker position={[35.783835, -78.670851]}>
+              <Popup>I am currently studying Computer Science at NC State!</Popup>
             </Marker>
           </MapContainer>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type= "line-scale-pulse-out" />
     </>
   )
 }
